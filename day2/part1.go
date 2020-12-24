@@ -32,14 +32,11 @@ func doThing(slice []string) {
 			z := strings.Split(f[1], "")
 			letterToSearchFor := z[0]
 			var amountFound int64 = 0
-			for idx := range f {
-				if idx == 2 {
-					x := strings.Split(f[2], "")
-					for _, n := range x {
-						if n == letterToSearchFor {
-							amountFound++
-						}
-					}
+
+			x := strings.Split(f[2], "")
+			for _, n := range x {
+				if n == letterToSearchFor {
+					amountFound++
 				}
 			}
 			if amountFound >= lowestPoint && amountFound <= highestPoint {

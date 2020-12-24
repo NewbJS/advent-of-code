@@ -6,13 +6,15 @@ const dElementsAsInt = dArray.map((x) => {
   return parseInt(x, 10);
 });
 
+let answer;
 
 for (let i of dElementsAsInt) {
   for (let n of dElementsAsInt) {
     for (let x of dElementsAsInt) {
       if (i + n + x === 2020) {
-        console.log(i * n * x);
+        answer =  i * n * x;
       }
     }
   }
 }
+console.log("answer:", answer);

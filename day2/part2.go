@@ -18,9 +18,9 @@ func main() {
 
 }
 
-var passwordsFound int32
-
 func doThing(slice []string) {
+	var passwordsFound int32
+
 	for sIdx, el := range slice {
 		if sIdx < len(slice)-1 {
 			splitAtDash := strings.Split(el, "-")
@@ -36,11 +36,9 @@ func doThing(slice []string) {
 
 			for idx, n := range x {
 				idx64 := int64(idx)
-				if n == letterToSearchFor && idx64+1 == lowestPoint {
+				if n == letterToSearchFor && (idx64+1 == lowestPoint || idx64+1 == highestPoint) {
 					amountFound++
 
-				} else if n == letterToSearchFor && idx64+1 == highestPoint {
-					amountFound++
 				}
 			}
 

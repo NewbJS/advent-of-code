@@ -18,9 +18,10 @@ func main() {
 
 }
 
-var passwordsFound int = 0
-
 func doThing(slice []string) {
+
+	var passwordsFound int = 0
+
 	for sIdx, el := range slice {
 		if sIdx < len(slice)-1 {
 			// Sorry for poor varible names btw
